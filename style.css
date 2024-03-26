@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
@@ -11,14 +13,20 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensures the background is behind content */
+    z-index: -1;
 }
 
+
+
 header {
-    background: #333;
-    color: #fff;
+    background: #7C9473; /* Olive green background for a natural feel */
+    color: #FFFFFF; /* White text for contrast */
     padding: 20px;
     text-align: center;
 }
 
-/* Additional styles as per your original content */
+header h1 {
+    font-family: 'Brush Script MT', cursive; /* Brush Script MT for a personal, handcrafted feel */
+    font-size: 4em; /* Increased size for better visibility */
+    color: #F4EBD9; /* Soft, creamy color that stands out */
+}
