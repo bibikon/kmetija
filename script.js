@@ -1,29 +1,21 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const images = [
+        'cow.jpg',
+        'cows.jpg',
+        'goat.jpg',
+        'R.jpg'
+    ];
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+    let currentImageIdx = 0;
+    const backgroundSlider = document.getElementById('background-slider');
 
-#hero {
-    background: url('path/to/your/hero-image.jpg') no-repeat center center/cover;
-    height: 400px;
-}
+    // Initial background image setup
+    backgroundSlider.style.backgroundImage = `url(${images[currentImageIdx]})`;
+    backgroundSlider.style.backgroundSize = 'cover';
+    backgroundSlider.style.backgroundPosition = 'center';
 
-section {
-    padding: 20px;
-    text-align: center;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
+    setInterval(() => {
+        currentImageIdx = (currentImageIdx + 1) % images.length;
+        backgroundSlider.style.backgroundImage = `url(${images[currentImageIdx]})`;
+    }, 5000); // Change image every 5000 milliseconds (5 seconds)
+});
